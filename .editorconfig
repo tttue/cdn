@@ -29,7 +29,7 @@ indent_style = space
 indent_size = 4
 
 # Perl
-[*.{pl, pm}]
+[*.{pl,pm}]
 indent_style = space
 indent_size = 4
 
