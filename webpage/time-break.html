@@ -1,0 +1,98 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- Copyright (c) 2006. Adobe Systems Incorporated. All rights reserved. -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title></title>
+  <link rel="stylesheet" href="https://tttue.github.io/cdn/lib/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://tttue.github.io/cdn/lib/css/padding-margin-width.min.css">
+  <link rel="stylesheet" href="https://tttue.github.io/cdn/lib/jquery-ui/jquery-ui.min.css">
+  <link rel="stylesheet" href="https://tttue.github.io/cdn/lib/font-awesome/css/font-awesome.min.css">
+  <script src="https://tttue.github.io/cdn/lib/jquery/jquery-3.6.0.min.js"></script>
+  <script src="https://tttue.github.io/cdn/lib/jquery-ui/jquery-ui.min.js"></script>
+  <script src="https://tttue.github.io/cdn/lib/validator.js"></script>
+  <script src="https://tttue.github.io/cdn/lib/moment.js"></script>
+  <script src="https://tttue.github.io/cdn/lib/tool.js"></script>
+</head>
+<style>
+  #result_name {
+    color: red;
+  }
+  #result_img {
+    border: 1px solid grey;
+  }
+.waviy {
+  position: relative;
+  -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
+  font-size: 40px;
+}
+.waviy span {
+  position: relative;
+  display: inline-block;
+  /* color: #fff; */
+  font-weight: bold;
+  /* text-transform: uppercase; */
+  animation: waviy 1s infinite;
+  animation-delay: calc(.1s * var(--i));
+
+}
+@keyframes waviy {
+  0%,40%,100% {
+    transform: translateY(0)
+  }
+  20% {
+    transform: translateY(-20px)
+  }
+}
+</style>
+<body>
+  <div class="container p-t-50">
+    <div align="center">
+      <h2>Today's break time</h2>
+      <div class="p-t-20">
+        <input type="button" class="btn btn-outline-info" onclick="runRandom()" value="Select"></input>
+      </div>
+
+      <div id="result" class="p-t-20" style="display:none">
+        <div id="result_name" class="waviy"></div>
+        <div class="p-t-40" >
+          <img id="result_img" height="300"></img>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let data = {
+      0:{
+        name: 'Type　race',
+        image_src: 'https://c.tenor.com/4RcLTxkPEsMAAAAC/typing-jim-carrey.gif'
+      },
+      1: {
+        name: 'Game　Arcade',
+        image_src: 'https://c.tenor.com/x7gMfWnOJYIAAAAd/enabbun-%EC%97%90%EB%82%98%EB%BB%94.gif'
+      },
+      2: {
+        name: 'Squat',
+        image_src: 'https://c.tenor.com/5z4q0v91sNYAAAAM/squats-exercise.gif'
+      }
+    }
+    function runRandom() {
+      let choosen = tool.getRandomInt(3)
+      console.log("Random =", choosen)
+      let arr = []
+      data[choosen].name.split('').forEach((value, index)=>{
+        arr.push(`<span style="--i:${index+1}">${value}</span>`)
+      })
+      $('#result_name').html(arr.join(''))
+      $('#result_img').attr('src', data[choosen].image_src)
+      $('#result').css('display','block')
+    }
+  </script>
+</body>
+
+</html>
