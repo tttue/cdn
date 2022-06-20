@@ -29,5 +29,5 @@ indent_style = space
 indent_size = 4
 
 #Windows files
-[*.{bat,cmd,ps1,txt,log}]
+[*.{bat,cmd,ps1}]
 end_of_line = crlf
