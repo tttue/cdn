@@ -1,0 +1,32 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- Copyright (c) 2006. Adobe Systems Incorporated. All rights reserved. -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title></title>
+</head>
+<script>
+  function randomString(length) {
+    var result = ''
+    var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+    var charactersLength = characters.length
+    for (var i = 0; i < length; i++) {
+      result += characters.charAt(Math.floor(Math.random() * charactersLength))
+    }
+    return result
+  }
+  randS = randomString(10)
+  new_link = `https://kor.tttue.freeddns.org/word/kor-random-word.php?num=10&lesson=ko_kiip_0,ko_kiip_0_1,ko_kiip_1&v=${randS}`
+  window.location.href=new_link
+</script>
+
+<body>
+  <div class="container">
+  </div>
+</body>
+
+</html>
