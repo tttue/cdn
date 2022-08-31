@@ -19,8 +19,14 @@
     }
     return result
   }
-  randS = randomString(10)
-  new_link = `https://kor.tttue.freeddns.org/word/kor-random-word.php?num=10&lesson=ko_kiip_0,ko_kiip_0_1,ko_kiip_1&v=${randS}`
+  const randS = randomString(10)
+  const lessons = [
+    "ko_kiip_0",
+    "ko_kiip_0_1",
+    "ko_kiip_1"
+  ]
+  const lessonS = lessons.join(',')
+  const new_link = `https://kor.tttue.freeddns.org/word/kor-random-word.php?num=10&lesson=${lessonS}&v=${randS}`
   window.location.href=new_link
 </script>
 
