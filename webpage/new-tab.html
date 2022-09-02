@@ -12,7 +12,7 @@
 </head>
 <script>
   get_link = () => {
-    const rand_s = randomString(10)
+    const rand_s = tool.randomString(10)
     const lessons = {
       english: [
         "toeic_words",
@@ -31,7 +31,7 @@
 
     }
     const language_list = ['english', 'korean', 'vn_korean']
-    const language = language_list[getRandomInt(language_list.length-1)]
+    const language = language_list[tool.getRandomInt(language_list.length - 1)]
     const lesson_s = lessons[language].join(',')
     let new_link = 'https://google.com'
     switch (language) {
