@@ -8,26 +8,47 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title></title>
+  <script src="https://tttue.github.io/cdn/lib/tool.js"></script>
 </head>
 <script>
-  function randomString(length) {
-    var result = ''
-    var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
-    var charactersLength = characters.length
-    for (var i = 0; i < length; i++) {
-      result += characters.charAt(Math.floor(Math.random() * charactersLength))
+  get_link = () => {
+    const rand_s = randomString(10)
+    const lessons = {
+      english: [
+        "toeic_words",
+        "en_words_2186"
+      ],
+      korean: [
+        "ko_kiip_0",
+        "ko_kiip_0_1",
+        "ko_kiip_1"
+      ],
+      vn_korean: [
+        "vn_ko_kiip_0",
+        "vn_ko_kiip_0_1",
+        "vn_ko_kiip_1"
+      ]
+
     }
-    return result
+    const language_list = ['english', 'korean', 'vn_korean']
+    const language = language_list[getRandomInt(language_list.length-1)]
+    const lesson_s = lessons[language].join(',')
+    let new_link = 'https://google.com'
+    switch (language) {
+      case 'korean':
+        new_link = `https://kor.tttue.freeddns.org/word/kor-random-word.php?num=10&lesson=${lesson_s}&v=${rand_s}`
+        break
+      case 'vn_korean':
+        new_link = `https://kor.tttue.freeddns.org/word/vn-kor-random-word.php?num=10&lesson=${lesson_s}&v=${rand_s}`
+        break
+      default:
+        new_link = `https://eng.tttue.freeddns.org/word/eng-random-word.php?num=10&lesson=${lesson_s}&v=${rand_s}`
+        break
+    }
+    return new_link
   }
-  const randS = randomString(10)
-  const lessons = [
-    "ko_kiip_0",
-    "ko_kiip_0_1",
-    "ko_kiip_1"
-  ]
-  const lessonS = lessons.join(',')
-  const new_link = `https://kor.tttue.freeddns.org/word/kor-random-word.php?num=10&lesson=${lessonS}&v=${randS}`
-  window.location.href=new_link
+  window.location.href = get_link()
+
 </script>
 
 <body>
