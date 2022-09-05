@@ -1,0 +1,163 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Payment Demo</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script type="text/javascript" src="https://service.iamport.kr/js/iamport.payment-1.1.2.js"></script>
+  <script type="text/javascript"
+    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <style>
+    .goog-logo-link {
+      display: none !important;
+    }
+
+    .goog-te-gadget {
+      color: transparent !important;
+    }
+
+    .goog-te-gadget .goog-te-combo {
+      color: #000 !important;
+    }
+  </style>
+
+  <script>
+
+
+    function callme() {
+      IMP.init('imp00322567')
+      payRequest()
+    }
+    function payRequest() {
+      const merchant_uid = "ORD20180131-0000011"
+
+      //you can set your value accordinglly by using simple domcument.getElementById().value
+      IMP.request_pay({
+        pg: 'jtnet', // version 1.1.0.
+        pay_method: 'card',
+        merchant_uid: merchant_uid,
+        name: 'This is My name',
+        amount: 1000,
+        buyer_email: 'this_is_buyer_email@gmail.com',
+        buyer_name: 'This is buyer name',
+        buyer_tel: '010-1234-5678',
+        buyer_addr: 'This is buyer email',
+        buyer_postcode: '123-456',
+        m_redirect_url: 'https://yourdomain/API/payment.html'//here you can specified your URL
+      }, function (rsp) {
+        if (rsp.success) {
+          var msg = 'Succeess message.'
+          msg += 'response_id: ' + rsp.imp_uid
+          msg += 'response_merchant_id : ' + rsp.merchant_uid
+          msg += 'response_paid_amount: ' + rsp.paid_amount
+          msg += 'rsp.apply_num: ' + rsp.apply_num
+        } else {
+          var msg = 'Failure message.'
+          msg += 'rsp.error_msg: ' + rsp.error_msg
+        }
+        alert(msg)
+      })
+    }
+
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element')
+      //goog-te-combo
+    }
+
+  </script>
+</head>
+
+<body>
+  <div id="google_translate_element" style="text-align:center;"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12" id="alertmsg"></div>
+      <!-- panel preview -->
+      <div class="col-sm-3"></div>
+      <div class="col-sm-6">
+        <h4>I'mport; Payment module DEMO</h4>
+        <div class="panel panel-default">
+          <form name="frm" method="post" id="frm">
+            <div class="panel-body form-horizontal payment-form">
+
+              <div class="form-group">
+                <label for="date" class="col-sm-3 control-label">Payment Name</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" id="name" name="name" value="paymentName">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="order_number" class="col-sm-3 control-label">Order Number</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" id="order_number" name="order_number" value="1234">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="ticket_name" class="col-sm-3 control-label">Ticket Name</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" id="ticket_name" name="ticket_name" value="ticket_1234">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="amount" class="col-sm-3 control-label">Amount</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" id="amount" name="amount" value="1000">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="buyer_email" class="col-sm-3 control-label">Buyer Email</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" id="buyer_email" name="buyer_email" value="text@gmail.com">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="buyer_name" class="col-sm-3 control-label">Buyer Name</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" id="buyer_name" name="buyer_name" value="Tester">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="buyer_phone_number" class="col-sm-3 control-label">Buyer Phone
+                  Number</label>
+                <div class="col-sm-9">
+                  <input type="tel" class="form-control" id="buyer_phone_number" name="buyer_phone_number"
+                    value="0129384756">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="buyer_tel" class="col-sm-3 control-label">Virtual account deposit
+                  date</label>
+                <div class="col-sm-9">
+                  <input type="date" class="form-control" id="vbank_due" name="vbank_due">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="col-sm-12 text-right">
+                  <div class="col-sm-3"></div>
+                  <div class="col-sm-6">
+                    <input class='form-control btn btn-primary' type='button' onclick="callme();"
+                      value="Pay Now"></input>
+                  </div>
+                  <div class="col-sm-3"></div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="col-sm-3"></div>
+    </div>
+  </div>
+</body>
+
+</html>
