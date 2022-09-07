@@ -4,13 +4,13 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>Payment Demo</title>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-  <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
   <script type="text/javascript" src="https://service.iamport.kr/js/iamport.payment-1.1.2.js"></script>
-  <script type="text/javascript"
-    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script src="https://tttue.github.io/cdn/lib/moment.js"></script>
+  <script src="https://tttue.github.io/cdn/lib/tool.js"></script>
 
   <style>
     .goog-logo-link {
@@ -27,29 +27,30 @@
   </style>
 
   <script>
-
-
-    function callme() {
-      IMP.init('imp00322567')
-      payRequest()
+    function createOrderId(){
+      const momentDate = moment(Date.now())
+      return `ORD${momentDate.format("YYYYMMDD")}-${tool.randomString(10)}`
     }
-    function payRequest() {
-      const merchant_uid = "ORD20180131-0000011"
 
+    function callMe() {
+      IMP.init('imp00322567')
+      const form = document.getElementById('my_form');
+      const formData = new FormData(form);
       //you can set your value accordinglly by using simple domcument.getElementById().value
-      IMP.request_pay({
+      const params = {
         pg: 'jtnet', // version 1.1.0.
         pay_method: 'card',
-        merchant_uid: merchant_uid,
-        name: 'This is My name',
-        amount: 1000,
-        buyer_email: 'this_is_buyer_email@gmail.com',
-        buyer_name: 'This is buyer name',
-        buyer_tel: '010-1234-5678',
-        buyer_addr: 'This is buyer email',
-        buyer_postcode: '123-456',
-        m_redirect_url: 'https://yourdomain/API/payment.html'//here you can specified your URL
-      }, function (rsp) {
+        merchant_uid: formData.get('order_number'),
+        name: formData.get('name'),
+        amount: formData.get('amount'),
+        buyer_email: formData.get('buyer_email'),
+        buyer_name: formData.get('buyer_name'),
+        buyer_tel: formData.get('buyer_tel'),
+        buyer_addr: formData.get('buyer_addr'),
+        buyer_postcode: formData.get('buyer_postcode'),
+        // m_redirect_url: 'https://yourdomain/API/payment.html'//here you can specified your URL
+      }
+      IMP.request_pay(params, function (rsp) {
         if (rsp.success) {
           var msg = 'Succeess message.'
           msg += 'response_id: ' + rsp.imp_uid
@@ -66,9 +67,11 @@
 
     function googleTranslateElementInit() {
       new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element')
-      //goog-te-combo
     }
+    $(document).ready(function () {
+      $("#order_number").val(createOrderId())
 
+    });
   </script>
 </head>
 
@@ -82,7 +85,7 @@
       <div class="col-sm-6">
         <h4>I'mport; Payment module DEMO</h4>
         <div class="panel panel-default">
-          <form name="frm" method="post" id="frm">
+          <form name="frm" method="post" id="my_form">
             <div class="panel-body form-horizontal payment-form">
 
               <div class="form-group">
@@ -94,21 +97,14 @@
               <div class="form-group">
                 <label for="order_number" class="col-sm-3 control-label">Order Number</label>
                 <div class="col-sm-9">
-                  <input type="text" class="form-control" id="order_number" name="order_number" value="1234">
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label for="ticket_name" class="col-sm-3 control-label">Ticket Name</label>
-                <div class="col-sm-9">
-                  <input type="text" class="form-control" id="ticket_name" name="ticket_name" value="ticket_1234">
+                  <input type="text" class="form-control" id="order_number" name="order_number" readonly>
                 </div>
               </div>
 
               <div class="form-group">
                 <label for="amount" class="col-sm-3 control-label">Amount</label>
                 <div class="col-sm-9">
-                  <input type="text" class="form-control" id="amount" name="amount" value="1000">
+                  <input type="text" class="form-control" id="amount" name="amount" value="100">
                 </div>
               </div>
               <div class="form-group">
@@ -132,7 +128,7 @@
                     value="0129384756">
                 </div>
               </div>
-
+<!--
               <div class="form-group">
                 <label for="buyer_tel" class="col-sm-3 control-label">Virtual account deposit
                   date</label>
@@ -140,12 +136,12 @@
                   <input type="date" class="form-control" id="vbank_due" name="vbank_due">
                 </div>
               </div>
-
+-->
               <div class="form-group">
                 <div class="col-sm-12 text-right">
                   <div class="col-sm-3"></div>
                   <div class="col-sm-6">
-                    <input class='form-control btn btn-primary' type='button' onclick="callme();"
+                    <input class='form-control btn btn-primary' type='button' onclick="callMe();"
                       value="Pay Now"></input>
                   </div>
                   <div class="col-sm-3"></div>
