@@ -68,9 +68,8 @@
     function googleTranslateElementInit() {
       new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element')
     }
-    $(document).ready(function () {
+    $(function() { // replace $(document).ready(function () {
       $("#order_number").val(createOrderId())
-
     });
   </script>
 </head>
