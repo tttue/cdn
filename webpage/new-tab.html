@@ -1,16 +1,16 @@
-<!DOCTYPE html
-  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <!-- Copyright (c) 2006. Adobe Systems Incorporated. All rights reserved. -->
-<!DOCTYPE html>
-<html>
-
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title></title>
-  <script src="https://tttue.github.io/cdn/lib/tool.js"></script>
-</head>
+<meta name="generator" content="HTML Tidy for HTML5 for Windows version 5.6.0" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title></title>
+
+<script src="https://tttue.github.io/cdn/lib/tool.js"></script>
 <script>
+<![CDATA[
   get_link = () => {
     const rand_s = tool.randomString(10)
     const lessons = {
@@ -24,6 +24,9 @@
         "ko_kiip_1",
         "ko_giao_trinh_tu_hoc_tieng_han_01",
       ],
+      korean_grammar: [
+        "ko_ngu_phap_so_cap",
+      ],
       vn_korean: [
         "vn_ko_kiip_0",
         "vn_ko_kiip_0_1",
@@ -32,12 +35,16 @@
       ]
 
     }
-    const language_list = ['english', 'korean', 'vn_korean']
+    // const language_list = ["english", "korean", "vn_korean"]
+    const language_list = ["korean_grammar"]
     const language = language_list[tool.getRandomInt(language_list.length - 1)]
     const lesson_s = lessons[language].join(',')
     let new_link = 'https://google.com'
     switch (language) {
       case 'korean':
+        new_link = `https://kor.tttue.freeddns.org/word/kor-random-word.php?num=10&lesson=${lesson_s}&v=${rand_s}`
+        break
+      case 'korean_grammar':
         new_link = `https://kor.tttue.freeddns.org/word/kor-random-word.php?num=10&lesson=${lesson_s}&v=${rand_s}`
         break
       case 'vn_korean':
@@ -51,11 +58,10 @@
   }
   window.location.href = get_link()
 
+]]>
 </script>
-
+</head>
 <body>
-  <div class="container">
-  </div>
+<div class="container"></div>
 </body>
-
 </html>
