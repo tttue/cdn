@@ -80,10 +80,20 @@
       2: {
         name: 'Squat',
         image_src: 'https://c.tenor.com/5z4q0v91sNYAAAAM/squats-exercise.gif'
+      },
+      3: {
+        name: 'Dart',
+        image_src: 'https://c.tenor.com/5z4q0v91sNYAAAAM/squats-exercise.gif'
+      },
+      4: {
+        name: 'Gonggi',
+        image_src: 'https://c.tenor.com/5z4q0v91sNYAAAAM/squats-exercise.gif'
       }
+
+
     }
     function runRandom() {
-      let choosen = tool.getRandomInt(2)
+      let choosen = tool.getRandomInt(4)
       console.log("Random =", choosen)
       let arr = []
       data[choosen].name.split('').forEach((value, index)=>{
