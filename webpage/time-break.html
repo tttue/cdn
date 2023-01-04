@@ -83,17 +83,15 @@
       },
       3: {
         name: 'Dart',
-        image_src: 'https://c.tenor.com/5z4q0v91sNYAAAAM/squats-exercise.gif'
+        image_src: 'https://media.tenor.com/Ld2GJHUz2fkAAAAC/darts-bulls-eye.gif'
       },
       4: {
         name: 'Gonggi',
-        image_src: 'https://c.tenor.com/5z4q0v91sNYAAAAM/squats-exercise.gif'
+        image_src: 'https://64.media.tumblr.com/7bd088e40baf8a44ec6fb6c9979a27dd/tumblr_onqcnhA0Jj1vw93r9o4_r3_400.gif'
       }
-
-
     }
     function runRandom() {
-      let choosen = tool.getRandomInt(4)
+      let choosen = tool.getRandomInt(Object.keys(data).length-1)
       console.log("Random =", choosen)
       let arr = []
       data[choosen].name.split('').forEach((value, index)=>{
