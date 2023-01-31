@@ -77,22 +77,22 @@
         name: 'Game　Arcade',
         image_src: 'https://c.tenor.com/x7gMfWnOJYIAAAAd/enabbun-%EC%97%90%EB%82%98%EB%BB%94.gif'
       },
+//      2: {
+//        name: 'Squat',
+//        image_src: 'https://c.tenor.com/5z4q0v91sNYAAAAM/squats-exercise.gif'
+//      },
       2: {
-        name: 'Squat',
-        image_src: 'https://c.tenor.com/5z4q0v91sNYAAAAM/squats-exercise.gif'
-      },
-      3: {
         name: 'Dart',
         image_src: 'https://media.tenor.com/Ld2GJHUz2fkAAAAC/darts-bulls-eye.gif'
       },
-      4: {
+      3: {
         name: 'Gonggi',
         image_src: 'https://64.media.tumblr.com/7bd088e40baf8a44ec6fb6c9979a27dd/tumblr_onqcnhA0Jj1vw93r9o4_r3_400.gif'
       }
     }
     function runRandom() {
       let choosen = tool.getRandomInt(Object.keys(data).length-1)
-      console.log("Random =", choosen)
+      //console.log("Random =", choosen)
       let arr = []
       data[choosen].name.split('').forEach((value, index)=>{
         arr.push(`<span style="--i:${index+1}">${value}</span>`)
