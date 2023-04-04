@@ -17,6 +17,9 @@
   <script src="https://tttue.github.io/cdn/lib/tool.js"></script>
 </head>
 <style>
+  #date {
+    color: blue;
+  }
   #result_name {
     color: red;
   }
@@ -51,6 +54,7 @@
   <div class="container p-t-50">
     <div align="center">
       <h2>Today's break time</h2>
+      <h4 id="date"></h4>
       <div class="p-t-20">
         <input type="button" class="btn btn-outline-info" onclick="runRandom()" value="Select"></input>
       </div>
@@ -104,6 +108,8 @@
       $('#result_img').attr('src', data[choosen].image_src)
       $('#result').css('display','block')
     }
+    let date = new Date()
+    document.querySelector('#date').textContent = date.toDateString()
   </script>
 </body>
 
