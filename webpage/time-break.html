@@ -96,6 +96,8 @@
 //      },
     ]
     function runRandom() {
+      let date = new Date()
+      document.querySelector('#date').textContent = moment(date).format("YYYY-MM-DD HH:mm:ss")
       // Disable Select button
       document.querySelector('.btn.btn-outline-info').disabled=true
       let choosen = tool.getRandomInt(Object.keys(data).length-1)
@@ -108,8 +110,6 @@
       $('#result_img').attr('src', data[choosen].image_src)
       $('#result').css('display','block')
     }
-    let date = new Date()
-    document.querySelector('#date').textContent = moment(date).format("YYYY-MM-DD HH:mm:ss")
   </script>
 </body>
 
