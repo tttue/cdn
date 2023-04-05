@@ -109,7 +109,7 @@
       $('#result').css('display','block')
     }
     let date = new Date()
-    document.querySelector('#date').textContent = date.toDateString()
+    document.querySelector('#date').textContent = moment(date).format("YYYY-MM-DD HH:mm:ss")
   </script>
 </body>
 
