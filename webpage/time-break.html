@@ -20,36 +20,46 @@
   #date {
     color: blue;
   }
+
   #result_name {
     color: red;
   }
+
   #result_img {
     border: 1px solid grey;
   }
-.waviy {
-  position: relative;
-  -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
-  font-size: 40px;
-}
-.waviy span {
-  position: relative;
-  display: inline-block;
-  /* color: #fff; */
-  font-weight: bold;
-  /* text-transform: uppercase; */
-  animation: waviy 1s infinite;
-  animation-delay: calc(.1s * var(--i));
 
-}
-@keyframes waviy {
-  0%,40%,100% {
-    transform: translateY(0)
+  .waviy {
+    position: relative;
+    -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0, 0, 0, .2));
+    font-size: 40px;
   }
-  20% {
-    transform: translateY(-20px)
+
+  .waviy span {
+    position: relative;
+    display: inline-block;
+    /* color: #fff; */
+    font-weight: bold;
+    /* text-transform: uppercase; */
+    animation: waviy 1s infinite;
+    animation-delay: calc(.1s * var(--i));
+
   }
-}
+
+  @keyframes waviy {
+
+    0%,
+    40%,
+    100% {
+      transform: translateY(0)
+    }
+
+    20% {
+      transform: translateY(-20px)
+    }
+  }
 </style>
+
 <body>
   <div class="container p-t-50">
     <div align="center">
@@ -61,7 +71,7 @@
 
       <div id="result" class="p-t-20" style="display:none">
         <div id="result_name" class="waviy"></div>
-        <div class="p-t-40" >
+        <div class="p-t-40">
           <img id="result_img" height="300"></img>
         </div>
       </div>
@@ -78,10 +88,10 @@
         name: 'Game　Arcade',
         image_src: 'https://thumbs.gfycat.com/OilyFrailGalapagostortoise-size_restricted.gif'
       },
-//    {
-//        name: 'Squat',
-//        image_src: 'https://c.tenor.com/5z4q0v91sNYAAAAM/squats-exercise.gif'
-//      },
+      //    {
+      //        name: 'Squat',
+      //        image_src: 'https://c.tenor.com/5z4q0v91sNYAAAAM/squats-exercise.gif'
+      //      },
       {
         name: 'Dart',
         image_src: 'https://media.tenor.com/Ld2GJHUz2fkAAAAC/darts-bulls-eye.gif'
@@ -90,32 +100,32 @@
         name: 'Gonggi',
         image_src: 'https://64.media.tumblr.com/7bd088e40baf8a44ec6fb6c9979a27dd/tumblr_onqcnhA0Jj1vw93r9o4_r3_400.gif'
       },
-//      {
-//        name: 'Halli　Galli',
-//        image_src: 'https://media.tenor.com/BJAFxVG3p3gAAAAC/kleinerfeigling-halli-galli.gif'
-//      },
+      //      {
+      //        name: 'Halli　Galli',
+      //        image_src: 'https://media.tenor.com/BJAFxVG3p3gAAAAC/kleinerfeigling-halli-galli.gif'
+      //      },
     ]
     function runRandom() {
       const cookieName = 'time_break_choice'
       let date = new Date()
       document.querySelector('#date').textContent = moment(date).format("YYYY-MM-DD HH:mm:ss")
       // Disable Select button
-      document.querySelector('.btn.btn-outline-info').disabled=true
+      document.querySelector('.btn.btn-outline-info').disabled = true
 
-      let choosen = undefined
+      let choice = undefined
       let lastChoice = parseInt(tool.getCookie(cookieName))
-      while (choosen == undefined || choosen == lastChoice) {
-        choosen = tool.getRandomInt(Object.keys(data).length - 1)
+      while (choice == undefined || choice == lastChoice) {
+        choice = tool.getRandomInt(Object.keys(data).length - 1)
       }
 
-      tool.setCookie(cookieName, `${choosen}`, 30)
+      tool.setCookie(cookieName, `${choice}`, 30)
       let arr = []
-      data[choosen].name.split('').forEach((value, index)=>{
-        arr.push(`<span style="--i:${index+1}">${value}</span>`)
+      data[choice].name.split('').forEach((value, index) => {
+        arr.push(`<span style="--i:${index + 1}">${value}</span>`)
       })
       $('#result_name').html(arr.join(''))
-      $('#result_img').attr('src', data[choosen].image_src)
-      $('#result').css('display','block')
+      $('#result_img').attr('src', data[choice].image_src)
+      $('#result').css('display', 'block')
     }
   </script>
 </body>
