@@ -96,12 +96,19 @@
 //      },
     ]
     function runRandom() {
+      const cookieName = 'time_break_choice'
       let date = new Date()
       document.querySelector('#date').textContent = moment(date).format("YYYY-MM-DD HH:mm:ss")
       // Disable Select button
       document.querySelector('.btn.btn-outline-info').disabled=true
-      let choosen = tool.getRandomInt(Object.keys(data).length-1)
-      //console.log("Random =", choosen)
+
+      let choosen = undefined
+      let lastChoice = parseInt(tool.getCookie(cookieName))
+      while (choosen == undefined || choosen == lastChoice) {
+        choosen = tool.getRandomInt(Object.keys(data).length - 1)
+      }
+
+      tool.setCookie(cookieName, `${choosen}`, 30)
       let arr = []
       data[choosen].name.split('').forEach((value, index)=>{
         arr.push(`<span style="--i:${index+1}">${value}</span>`)
