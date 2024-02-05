@@ -41,16 +41,16 @@
     let new_link = 'https://google.com'
     switch (language) {
       case 'korean':
-        new_link = `https://kor.tttue.freeddns.org/word/kor-random-word.php?num=10&lesson=${lesson_s}&v=${rand_s}`
+        new_link = `https://kor.tttue.freeddns.org/word/kor-random.py?num=10&lesson=${lesson_s}&v=${rand_s}`
         break
       case 'korean_grammar':
-        new_link = `https://kor.tttue.freeddns.org/word/kor-random-word.php?num=10&lesson=${lesson_s}&v=${rand_s}`
+        new_link = `https://kor.tttue.freeddns.org/word/kor-random.py?num=10&lesson=${lesson_s}&v=${rand_s}`
         break
       case 'vn_korean':
-        new_link = `https://kor.tttue.freeddns.org/word/vn-kor-random-word.php?num=10&lesson=${lesson_s}&v=${rand_s}`
+        new_link = `https://kor.tttue.freeddns.org/word/vn-kor-random.py?num=10&lesson=${lesson_s}&v=${rand_s}`
         break
       default:
-        new_link = `https://eng.tttue.freeddns.org/word/eng-random-word.php?num=10&lesson=${lesson_s}&v=${rand_s}`
+        new_link = `https://eng.tttue.freeddns.org/word/eng-random.py?num=10&lesson=${lesson_s}&v=${rand_s}`
         break
     }
     return new_link
