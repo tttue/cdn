@@ -7576,59 +7576,59 @@ img {
 /* Change icon of answer */
 
 .answer {
-  background-image: url(../images/icons/radio_none.png);
+  background-image: url(./images/icons/radio_none.png);
   background-repeat: no-repeat;
 }
 
 .answer.selected {
-  background-image: url(../images/icons/radio_sel.png);
+  background-image: url(./images/icons/radio_sel.png);
   opacity: 1;
   cursor: default
 }
 
 .answer.d.done:not(.q2) {
-  background-image: url(../images/icons/radio_right_sel.png);
+  background-image: url(./images/icons/radio_right_sel.png);
   color: #498e11;
   font-weight: 700
 }
 
 .answer.done.selected.d.q2 {
-  background-image: url(../images/icons/radio_right_sel.png);
+  background-image: url(./images/icons/radio_right_sel.png);
   color: #498e11;
   font-weight: 700
 }
 
 .answer.done.selected {
-  background-image: url(../images/icons/radio_fail.png);
+  background-image: url(./images/icons/radio_fail.png);
   color: #900;
   font-weight: 700
 }
 
 .answer.multi {
-  background-image: url(../images/icons/checkbox_none.png);
+  background-image: url(./images/icons/checkbox_none.png);
   background-repeat: no-repeat;
 }
 
 .answer.multi.selected {
-  background-image: url(../images/icons/checkbox_sel.png);
+  background-image: url(./images/icons/checkbox_sel.png);
   opacity: 1;
   cursor: default
 }
 
 .answer.multi.d.done:not(.q2) {
-  background-image: url(../images/icons/checkbox_right_sel.png);
+  background-image: url(./images/icons/checkbox_right_sel.png);
   color: #498e11;
   font-weight: 700
 }
 
 .answer.multi.done.selected.d.q2 {
-  background-image: url(../images/icons/checkbox_right_sel.png);
+  background-image: url(./images/icons/checkbox_right_sel.png);
   color: #498e11;
   font-weight: 700
 }
 
 .answer.multi.done.selected {
-  background-image: url(../images/icons/checkbox_fail.png);
+  background-image: url(./images/icons/checkbox_fail.png);
   color: #900;
   font-weight: 700
 }
