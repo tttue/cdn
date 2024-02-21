@@ -1,0 +1,42 @@
+@font-face {
+  font-family: FontAwesome;
+  src: url(https://tttue.github.io/cdn/lib/font-awesome/4.7.0/fonts/fontawesome-webfont.eot);
+  src: url(https://tttue.github.io/cdn/lib/font-awesome/4.7.0/fonts/fontawesome-webfont.eot?#iefix) format('embedded-opentype'), url(https://tttue.github.io/cdn/lib/font-awesome/4.7.0/fonts/fontawesome-webfont.woff) format('woff'), url(https://tttue.github.io/cdn/lib/font-awesome/4.7.0/fonts/fontawesome-webfont.ttf) format('truetype'), url(https://tttue.github.io/cdn/lib/font-awesome/4.7.0/fonts/fontawesome-webfont.svg#fontawesomeregular) format('svg');
+  font-weight: 400;
+  font-style: normal
+}
+
+.fa:before {
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale
+}
+
+.icon-arrow-up:before {
+  content: "\f062"
+}
+
+.btn-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 5px 8px;
+  border-radius: 5px;
+  font-size: 16px;
+  opacity: 0.6;
+}
+
+.btn-top:hover {
+  background-color: gray;
+}
