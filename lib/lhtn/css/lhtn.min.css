@@ -7839,30 +7839,30 @@ a, a:hover {
 }
 
 a.sp_uk {
-	background: url(../images/sp_uk.jpg) no-repeat;
+	background: url(./images/sp_uk.jpg) no-repeat;
 }
 
 a.sp_us {
-	background: url(../images/sp_us.jpg) no-repeat;
+	background: url(./images/sp_us.jpg) no-repeat;
 }
 
 a.sp_uk:hover {
-	background: url(../images/sp_uk_hover.jpg) no-repeat;
+	background: url(./images/sp_uk_hover.jpg) no-repeat;
 }
 
 a.sp_us:hover {
-	background: url(../images/sp_us_hover.jpg) no-repeat;
+	background: url(./images/sp_us_hover.jpg) no-repeat;
 }
 
 a.sp_nothing {
-	background: url(../images/sp.jpg) no-repeat;
+	background: url(./images/sp.jpg) no-repeat;
 }
 
 a.sp_nothing:hover {
-	background: url(../images/sp_hover.jpg) no-repeat;
+	background: url(./images/sp_hover.jpg) no-repeat;
 }
 a.sp_playing {
-  background: url(../images/sp_hover.jpg) no-repeat;
+  background: url(./images/sp_hover.jpg) no-repeat;
 }
 
 a.sp {
