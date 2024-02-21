@@ -193,11 +193,10 @@ td.tue_group-1:hover {
   width: 15.5%;
 }
 
-
 @font-face {
   font-family: FontAwesome;
   src: url(./fonts/fontawesome-webfont.eot?v=4.3);
-  src: url(.fonts/fontawesome-webfont.eot?#iefix&v=4.3) format('embedded-opentype'), url(./fonts/fontawesome-webfont.woff?v=4..3) format('woff'), url(./fonts/fontawesome-webfont.ttf?v=4.3) format('truetype'), url(.fonts/fontawesome-webfont.svg?v=4.3#fontawesomeregular) format('svg');
+  src: url(./fonts/fontawesome-webfont.eot?#iefix&v=4.3) format('embedded-opentype'), url(./fonts/fontawesome-webfont.woff?v=4..3) format('woff'), url(./fonts/fontawesome-webfont.ttf?v=4.3) format('truetype'), url(./fonts/fontawesome-webfont.svg?v=4.3#fontawesomeregular) format('svg');
   font-weight: 400;
   font-style: normal
 }
@@ -1316,7 +1315,7 @@ khung2 th {
   }
 }
 
-@media all and (min-width:0) {
+@media all and (min-width:0px) {
   div.watermark {
     width: 8.5in
   }
@@ -1762,284 +1761,6 @@ color .timett {
   font-weight: 700;
   padding: 1px 2px
 }
-
-#keyboardInputMaster {
-  position: fixed !important;
-  font: normal 11px Arial, sans-serif;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, .4);
-  background: rgba(255, 255, 255, .8);
-  border: 2px solid #2a84c9;
-  text-align: left;
-  z-index: 1000000;
-  width: auto;
-  height: auto;
-  min-width: 0;
-  min-height: 0;
-  margin: 0;
-  padding: 0;
-  line-height: normal;
-  -moz-user-select: none;
-  cursor: default;
-  top: 30%;
-  left: 45%;
-  display: block !important
-}
-
-#keyboardInputMaster label span {
-  display: inline-block;
-  margin-left: .3em;
-  font-size: .8em !important;
-  color: #326993
-}
-
-#keyboardInputMaster th div {
-  display: none !important
-}
-
-#keyboardInputMaster * {
-  position: static;
-  color: #fff;
-  font: normal 11px Arial, sans-serif;
-  width: auto;
-  height: auto;
-  min-width: 0;
-  min-height: 0;
-  margin: 0;
-  padding: 0;
-  border: 0 none;
-  outline: 0;
-  vertical-align: baseline;
-  line-height: 1.3em
-}
-
-#keyboardInputMaster table {
-  table-layout: auto
-}
-
-#keyboardInputMaster.keyboardInputSize1,
-#keyboardInputMaster.keyboardInputSize1 * {
-  font-size: 9px
-}
-
-#keyboardInputMaster.keyboardInputSize3,
-#keyboardInputMaster.keyboardInputSize3 * {
-  font-size: 13px
-}
-
-#keyboardInputMaster.keyboardInputSize4,
-#keyboardInputMaster.keyboardInputSize4 * {
-  font-size: 16px
-}
-
-#keyboardInputMaster.keyboardInputSize5,
-#keyboardInputMaster.keyboardInputSize5 * {
-  font-size: 20px
-}
-
-#keyboardInputMaster thead tr th {
-  padding: .3em .3em .1em .3em;
-  background: #2a84c9;
-  white-space: nowrap;
-  text-align: right
-}
-
-#keyboardInputMaster thead tr th div {
-  float: left;
-  font-size: 130% !important;
-  height: 1.3em;
-  font-weight: 700;
-  position: relative;
-  z-index: 1;
-  margin-right: .5em;
-  cursor: pointer;
-  background-color: transparent
-}
-
-#keyboardInputMaster thead tr th div ol {
-  position: absolute;
-  left: 0;
-  top: 90%;
-  list-style-type: none;
-  height: 9.4em;
-  overflow-y: auto;
-  overflow-x: hidden;
-  background-color: #f6f6f6;
-  border: 1px solid #999;
-  display: none;
-  text-align: left;
-  width: 12em
-}
-
-#keyboardInputMaster thead tr th div ol li {
-  padding: .2em .4em;
-  cursor: pointer;
-  white-space: nowrap;
-  width: 12em
-}
-
-#keyboardInputMaster thead tr th div ol li.selected {
-  background-color: #ffc
-}
-
-#keyboardInputMaster thead tr th div ol li.hover,
-#keyboardInputMaster thead tr th div ol li:hover {
-  background-color: #ddd
-}
-
-#keyboardInputMaster thead tr th big,
-#keyboardInputMaster thead tr th small,
-#keyboardInputMaster thead tr th span,
-#keyboardInputMaster thead tr th strong {
-  display: inline-block;
-  padding: 0 .4em;
-  height: 1.4em;
-  line-height: 1.4em;
-  background-color: #326993;
-  cursor: pointer;
-  margin: 0 0 .3em .3em !important;
-  vertical-align: middle;
-  -webkit-transition: background-color .15s ease-in-out;
-  -o-transition: background-color .15s ease-in-out;
-  transition: background-color .15s ease-in-out
-}
-
-#keyboardInputMaster thead tr th strong {
-  font-weight: 700
-}
-
-#keyboardInputMaster thead tr th small {
-  padding: 0 .2em 0 .3em
-}
-
-#keyboardInputMaster thead tr th big {
-  border-left: 0 none;
-  margin: 0;
-  padding: 0 .3em 0 .2em
-}
-
-#keyboardInputMaster thead tr th big.hover,
-#keyboardInputMaster thead tr th big:hover,
-#keyboardInputMaster thead tr th small.hover,
-#keyboardInputMaster thead tr th small:hover,
-#keyboardInputMaster thead tr th span.hover,
-#keyboardInputMaster thead tr th span:hover,
-#keyboardInputMaster thead tr th strong.hover,
-#keyboardInputMaster thead tr th strong:hover {
-  background-color: #ddd
-}
-
-#keyboardInputMaster tbody tr td {
-  text-align: left;
-  padding: .2em .3em .3em .3em;
-  vertical-align: top
-}
-
-#keyboardInputMaster tbody tr td div {
-  text-align: center;
-  position: relative;
-  zoom: 1
-}
-
-#keyboardInputMaster tbody tr td table {
-  white-space: nowrap;
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0
-}
-
-#keyboardInputMaster tbody tr td#keyboardInputNumpad table {
-  margin-left: .2em;
-  width: auto
-}
-
-#keyboardInputMaster tbody tr td table.keyboardInputCenter {
-  width: auto;
-  margin: 0 auto
-}
-
-#keyboardInputMaster tbody tr td table {
-  border-spacing: 1px;
-  border-collapse: separate
-}
-
-#keyboardInputMaster tbody tr td table tbody tr td {
-  vertical-align: middle;
-  padding: 0 .45em;
-  white-space: pre;
-  height: 1.8em;
-  font-family: 'Lucida Console', 'Arial Unicode MS', monospace;
-  background-color: #2a84c9;
-  cursor: default;
-  min-width: .75em;
-  -webkit-transition: background-color .15s ease-in-out;
-  -o-transition: background-color .15s ease-in-out;
-  transition: background-color .15s ease-in-out
-}
-
-#keyboardInputMaster tbody tr td table tbody tr td.last {
-  width: 99%
-}
-
-#keyboardInputMaster tbody tr td table tbody tr td.space {
-  padding: 0 4em
-}
-
-#keyboardInputMaster tbody tr td table tbody tr td.deadkey {
-  background-color: #6bb61d
-}
-
-#keyboardInputMaster tbody tr td table tbody tr td.target {
-  background-color: #6bb61d
-}
-
-#keyboardInputMaster tbody tr td table tbody tr td.hover,
-#keyboardInputMaster tbody tr td table tbody tr td:hover {
-  background-color: #0a497a
-}
-
-#keyboardInputMaster tbody tr td table tbody tr td.pressed,
-#keyboardInputMaster tbody tr td table tbody tr td:active,
-#keyboardInputMaster thead tr th span.pressed,
-#keyboardInputMaster thead tr th span:active {
-  background-color: #103b5c
-}
-
-#keyboardInputMaster tbody tr td table tbody tr td small {
-  display: block;
-  text-align: center;
-  font-size: .6em !important;
-  line-height: 1.1em
-}
-
-#keyboardInputMaster tbody tr td div label {
-  position: absolute;
-  bottom: .2em;
-  left: .3em
-}
-
-#keyboardInputMaster tbody tr td div label input {
-  background-color: #f6f6f6;
-  vertical-align: middle;
-  font-size: inherit;
-  width: 1.1em;
-  height: 1.1em
-}
-
-#keyboardInputMaster tbody tr td div var {
-  position: absolute;
-  bottom: 0;
-  right: 3px;
-  font-weight: 700;
-  font-style: italic;
-  color: #444
-}
-
-.keyboardInputInitiator {
-  margin: 0 3px;
-  vertical-align: middle;
-  cursor: pointer
-}
-
 .underline {
   border-bottom: .06em solid #333;
   display: inline-block;
@@ -2098,7 +1819,7 @@ color .timett {
 
 .dict_ndj {
   color: #2a84c9;
-  font-family: MS Mincho;
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif
   font-size: 18px;
   opacity: .8
 }
@@ -4475,6 +4196,13 @@ h1#arc-title {
   color: #2a84c9;
 }
 
+h1#arc-title {
+  font-family: Arial;
+  margin-top: 0;
+  font-weight: Bold;
+  font-size: 2em;
+  color: #2a84c9
+}
 h3#arc-title {
   font-family: Arial;
   margin-top: 0;
@@ -4841,6 +4569,17 @@ div.inputExample {
 
 .quiz img {
   width: 100%
+}
+
+.quizExplain {
+  position: relative;
+  clear: both;
+  overflow: hidden;
+  padding-top: 10px;
+  margin-top: 10px;
+  border-top: 1px solid #ddd;
+  min-height: 20px;
+  display: none
 }
 
 .quizDapAn {
@@ -5676,6 +5415,7 @@ div.inputExample {
 
 
 #infoMsg,
+#practiceScore,
 #testReview,
 #testScore,
 #userNote {
@@ -5753,6 +5493,9 @@ div.inputExample {
 #testFinish1,
 #testNotDo,
 #testNotDo1,
+#reTest,
+#saveError,
+#removeErrQuest,
 #testReviewBt {
   display: block;
   clear: both;
@@ -5823,6 +5566,19 @@ div.inputExample {
 #testResult td {
   padding: 5px 0;
   font-weight: 700
+}
+
+.exameQuizWrap .focus {
+  font-weight: 700;
+  color: #2a84c9 !important;
+  opacity: 1
+}
+
+.examQuestion {
+  font-size: 1.3em;
+  font-family: Verdana, sans-serif;
+  color: #103b5c;
+  line-height: 1.65;
 }
 
 .examWrap.selected .exameQuizWrap .focus .exameQuiz {
@@ -6369,40 +6125,6 @@ a.dl_chk:hover:active .dl_chk_ico {
 #bt_dangnhap:hover:active,
 .dl_submit:hover:active {
   background-color: #2076b8
-}
-
-a.dn_social {
-  width: 33%;
-  display: block;
-  height: 35px;
-  margin-right: .5%;
-  background: #666;
-  float: left;
-  text-indent: 40px;
-  color: #fff;
-  line-height: 35px;
-  margin-bottom: 10px;
-  opacity: .8
-}
-
-a.dn_social:hover {
-  opacity: 1
-}
-
-a.dn_social.facebook {
-  background: no-repeat left url(./images/icons/fb-35.png) #004088
-}
-
-a.dn_social.google {
-  background: no-repeat left url(./images/icons/google-35.png) #00a94f
-}
-
-a.dn_social.yahoo {
-  background: no-repeat left url(./images/icons/yahoo-35.png) #640f6c
-}
-
-.dn_social:last-child {
-  margin: 0
 }
 
 .dn_title_sep {
@@ -7724,6 +7446,11 @@ h3.fnews-title {
   display: none
 }
 
+.cauhoi-caudich {
+  color: #741808;
+  font-size: 1.2em;
+  font-weight: bold;
+}
 @media only screen and (max-width:500px) {
 
   #dn-wrap,
@@ -7844,4 +7571,116 @@ img {
 	.divider8 {
 		background-size: 70%;
 	}
+}
+
+/* Change icon of answer */
+
+.answer {
+  background-image: url(../images/icons/radio_none.png);
+  background-repeat: no-repeat;
+}
+
+.answer.selected {
+  background-image: url(../images/icons/radio_sel.png);
+  opacity: 1;
+  cursor: default
+}
+
+.answer.d.done:not(.q2) {
+  background-image: url(../images/icons/radio_right_sel.png);
+  color: #498e11;
+  font-weight: 700
+}
+
+.answer.done.selected.d.q2 {
+  background-image: url(../images/icons/radio_right_sel.png);
+  color: #498e11;
+  font-weight: 700
+}
+
+.answer.done.selected {
+  background-image: url(../images/icons/radio_fail.png);
+  color: #900;
+  font-weight: 700
+}
+
+.answer.multi {
+  background-image: url(../images/icons/checkbox_none.png);
+  background-repeat: no-repeat;
+}
+
+.answer.multi.selected {
+  background-image: url(../images/icons/checkbox_sel.png);
+  opacity: 1;
+  cursor: default
+}
+
+.answer.multi.d.done:not(.q2) {
+  background-image: url(../images/icons/checkbox_right_sel.png);
+  color: #498e11;
+  font-weight: 700
+}
+
+.answer.multi.done.selected.d.q2 {
+  background-image: url(../images/icons/checkbox_right_sel.png);
+  color: #498e11;
+  font-weight: 700
+}
+
+.answer.multi.done.selected {
+  background-image: url(../images/icons/checkbox_fail.png);
+  color: #900;
+  font-weight: 700
+}
+
+.explain {
+  color: #17257D;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.explain-caudich {
+  color: #444444;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 600px) {
+  td#td_afterhoanthanh b1.button {
+    margin-bottom: 5px;
+  }
+
+  table#testScoreTablePC {
+    display: none;
+  }
+
+  table#testScoreTableMb {
+    display: block;
+  }
+
+  p.p_hidden {
+    display: block;
+    height: 40px;
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  p.p_hidden {
+    display: block;
+    height: 170px;
+  }
+
+  table#testScoreTablePC {
+    display: block;
+  }
+
+  table#testScoreTableMb {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1480px) {
+  p.p_hidden {
+    display: none;
+  }
 }
