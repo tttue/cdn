@@ -7469,42 +7469,6 @@ h3.fnews-title {
   }
 }
 
-@media only screen and (max-width: 850px) {
-  table#testScoreTablePc {
-    display: none;
-  }
-
-  table#testScoreTableMb {
-    display: table;
-  }
-
-  table#practiceScoreMb {
-    display: table;
-  }
-
-  table#practiceScorePc {
-    display: none;
-  }
-}
-
-@media only screen and (min-width: 851px) {
-
-  table#testScoreTablePc {
-    display: table;
-  }
-
-  table#testScoreTableMb {
-    display: none;
-  }
-
-  table#practiceScoreMb {
-    display: none;
-  }
-
-  table#practiceScorePc {
-    display: table;
-  }
-}
 
 @media only screen and (min-width: 851px) and (max-width: 1449px) {
   h3.test-title {
@@ -7643,13 +7607,21 @@ img {
   td#td_afterhoanthanh b1.button {
     margin-bottom: 5px;
   }
-
-  table#testScoreTablePC {
+testScoreTablePc
+  table#testScoreTablePc {
     display: none;
   }
 
   table#testScoreTableMb {
     display: block;
+  }
+
+  table#practiceScoreMb {
+    display: table;
+  }
+
+  table#practiceScorePc {
+    display: none;
   }
 
   p.p_hidden {
@@ -7664,12 +7636,20 @@ img {
     height: 170px;
   }
 
-  table#testScoreTablePC {
+  table#testScoreTablePc {
     display: block;
   }
 
   table#testScoreTableMb {
     display: none;
+  }
+
+  table#practiceScoreMb {
+    display: none;
+  }
+
+  table#practiceScorePc {
+    display: table;
   }
 }
 
