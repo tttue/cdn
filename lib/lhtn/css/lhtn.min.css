@@ -7522,12 +7522,6 @@ h3.fnews-title {
   }
 }
 
-@media only screen and (max-width: 1410px) {
-  div.container {
-    margin-left: 0px;
-  }
-}
-
 img.quest-image {
   display: block;
   margin-left: auto;
