@@ -55,7 +55,11 @@
     }
     return new_link
   }
-  tool.openLink(get_link())
+  document.addEventListener("DOMContentLoaded", function() {
+    // Code to be executed when the DOM is ready
+    tool.openLink(get_link())
+  });
+
 
 </script>
 </head>
