@@ -7,7 +7,7 @@ div#local_loading {
   top: 0;
   left: 0;
   z-index: 9999;
-  opacity: 0.5;
+  opacity: 0.7;
 }
 
 /*
