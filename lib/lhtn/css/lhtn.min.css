@@ -796,11 +796,11 @@ khung2 th {
 
 @media only screen and (max-width:1023px) {
   .frame1 {
-    width: 25%!important
+    width: 25% !important
   }
 
   .frame2 {
-    width: 50%!important
+    width: 50% !important
   }
 
   .frame4 {
@@ -816,7 +816,7 @@ khung2 th {
 
   .frame1,
   .frame2 {
-    width: 50%
+    width: 50% !important
   }
 
   .right-link.short {
@@ -832,7 +832,7 @@ khung2 th {
   }
 
   .frame4 {
-    width: 50%!important
+    width: 50% !important
   }
 }
 
