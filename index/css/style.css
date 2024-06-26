@@ -101,8 +101,12 @@ table tr td:first-of-type a[href*=".jpeg"]
 {background-image: url(../images/image.png);}
 
 /* zips */
-table tr td:first-of-type a[href*=".zip"]
+table tr td:first-of-type a[href*=".zip"],
+table tr td:first-of-type a[href*=".rar"]
 {background-image: url(../images/zip.png);}
+
+table tr td:first-of-type a[href*=".7z"]
+{background-image: url(../images/7z.png);}
 
 /* css */
 table tr td:first-of-type a[href*=".css"]
@@ -110,14 +114,18 @@ table tr td:first-of-type a[href*=".css"]
 
 /* docs */
 table tr td:first-of-type a[href*=".doc"],
-table tr td:first-of-type a[href*=".docx"],
+table tr td:first-of-type a[href*=".docx"]
+{background-image: url(../images/word.png)}
+
 table tr td:first-of-type a[href*=".ppt"],
 table tr td:first-of-type a[href*=".pptx"],
 table tr td:first-of-type a[href*=".pps"],
-table tr td:first-of-type a[href*=".ppsx"],
+table tr td:first-of-type a[href*=".ppsx"]
+{background-image: url(../images/ppt.png)}
+
 table tr td:first-of-type a[href*=".xls"],
 table tr td:first-of-type a[href*=".xlsx"]
-{background-image: url(../images/office.png)}
+{background-image: url(../images/excel.png)}
 
 /* videos */
 table tr td:first-of-type a[href*=".avi"],
@@ -159,6 +167,25 @@ table tr td:first-of-type a[href*=".txt"]
 /* java */
 table tr td:first-of-type a[href*=".java"]
 {background-image: url(../images/java.png);}
+
+table tr td:first-of-type a[href*=".pdf"]
+{background-image: url(../images/pdf.png);}
+
+table tr td:first-of-type a[href*=".ico"]
+{background-image: url(../images/icon.png);}
+
+table tr td:first-of-type a[href*=".md"]
+{background-image: url(../images/markdown.png);}
+
+table tr td:first-of-type a[href*=".sh"]
+{background-image: url(../images/bash.png);}
+
+table tr td:first-of-type a[href*=".bat"],
+table tr td:first-of-type a[href*=".cmd"],
+table tr td:first-of-type a[href*=".ps"],
+table tr td:first-of-type a[href*=".ps1"]
+{background-image: url(../images/batch.png);}
+
 
 /* directories */
 table tr.dir td:first-of-type a
