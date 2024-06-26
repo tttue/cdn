@@ -93,76 +93,77 @@ tr:hover td a {
 /* icons for file types (icons by famfamfam) */
 
 /* images */
-table tr td:first-of-type a[href$=".jpg"],
-table tr td:first-of-type a[href$=".png"],
-table tr td:first-of-type a[href$=".gif"],
-table tr td:first-of-type a[href$=".svg"],
-table tr td:first-of-type a[href$=".jpeg"]
+table tr td:first-of-type a[href*=".jpg"],
+table tr td:first-of-type a[href*=".png"],
+table tr td:first-of-type a[href*=".gif"],
+table tr td:first-of-type a[href*=".svg"],
+table tr td:first-of-type a[href*=".jpeg"]
 {background-image: url(../images/image.png);}
 
 /* zips */
-table tr td:first-of-type a[href$=".zip"]
+table tr td:first-of-type a[href*=".zip"]
 {background-image: url(../images/zip.png);}
 
 /* css */
-table tr td:first-of-type a[href$=".css"]
+table tr td:first-of-type a[href*=".css"]
 {background-image: url(../images/css.png);}
 
 /* docs */
-table tr td:first-of-type a[href$=".doc"],
-table tr td:first-of-type a[href$=".docx"],
-table tr td:first-of-type a[href$=".ppt"],
-table tr td:first-of-type a[href$=".pptx"],
-table tr td:first-of-type a[href$=".pps"],
-table tr td:first-of-type a[href$=".ppsx"],
-table tr td:first-of-type a[href$=".xls"],
-table tr td:first-of-type a[href$=".xlsx"]
+table tr td:first-of-type a[href*=".doc"],
+table tr td:first-of-type a[href*=".docx"],
+table tr td:first-of-type a[href*=".ppt"],
+table tr td:first-of-type a[href*=".pptx"],
+table tr td:first-of-type a[href*=".pps"],
+table tr td:first-of-type a[href*=".ppsx"],
+table tr td:first-of-type a[href*=".xls"],
+table tr td:first-of-type a[href*=".xlsx"]
 {background-image: url(../images/office.png)}
 
 /* videos */
-table tr td:first-of-type a[href$=".avi"],
-table tr td:first-of-type a[href$=".wmv"],
-table tr td:first-of-type a[href$=".mp4"],
-table tr td:first-of-type a[href$=".mov"],
-table tr td:first-of-type a[href$=".m4a"]
+table tr td:first-of-type a[href*=".avi"],
+table tr td:first-of-type a[href*=".wmv"],
+table tr td:first-of-type a[href*=".mp4"],
+table tr td:first-of-type a[href*=".mov"],
+table tr td:first-of-type a[href*=".m4a"]
 {background-image: url(../images/video.png);}
 
 /* audio */
-table tr td:first-of-type a[href$=".mp3"],
-table tr td:first-of-type a[href$=".ogg"],
-table tr td:first-of-type a[href$=".aac"],
-table tr td:first-of-type a[href$=".wma"]
+table tr td:first-of-type a[href*=".mp3"],
+table tr td:first-of-type a[href*=".ogg"],
+table tr td:first-of-type a[href*=".aac"],
+table tr td:first-of-type a[href*=".wma"]
 {background-image: url(../images/audio.png);}
 
 /* web pages */
-table tr td:first-of-type a[href$=".html"],
-table tr td:first-of-type a[href$=".htm"]
+table tr td:first-of-type a[href*=".html"],
+table tr td:first-of-type a[href*=".htm"]
 {background-image: url(../images/html.png);
 }
-table tr td:first-of-type a[href$=".xml"]
+table tr td:first-of-type a[href*=".xml"]
 {background-image: url(../images/xml.png);}
 
-table tr td:first-of-type a[href$=".php"]
+table tr td:first-of-type a[href*=".php"]
 {background-image: url(../images/php.png);}
 
-table tr td:first-of-type a[href$=".js"]
+table tr td:first-of-type a[href*=".js"]
 {background-image: url(../images/js.png);}
+
+/* python */
+table tr td:first-of-type a[href*=".py"]
+{background-image: url(../images/python.png);}
+
+/* text */
+table tr td:first-of-type a[href*=".txt"]
+{background-image: url(../images/text.png);}
+
+/* java */
+table tr td:first-of-type a[href*=".java"]
+{background-image: url(../images/java.png);}
 
 /* directories */
 table tr.dir td:first-of-type a
 {background-image: url(../images/folder.png);}
 
-/* python */
-table tr td:first-of-type a[href$=".py"]
-{background-image: url(../images/python.png);}
-
-/* text */
-table tr td:first-of-type a[href$=".txt"]
-{background-image: url(../images/text.png);}
-
-/* java */
-table tr td:first-of-type a[href$=".java"]
-{background-image: url(../images/java.png);}
 
 /* iPhone */
 @media only screen and (max-device-width: 736px) {
