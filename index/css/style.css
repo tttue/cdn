@@ -136,7 +136,9 @@ table tr td:first-of-type a[href$=".wma"]
 
 /* web pages */
 table tr td:first-of-type a[href$=".html"],
-table tr td:first-of-type a[href$=".htm"],
+table tr td:first-of-type a[href$=".htm"]
+{background-image: url(../images/html.png);
+}
 table tr td:first-of-type a[href$=".xml"]
 {background-image: url(../images/xml.png);}
 
@@ -144,11 +146,23 @@ table tr td:first-of-type a[href$=".php"]
 {background-image: url(../images/php.png);}
 
 table tr td:first-of-type a[href$=".js"]
-{background-image: url(../images/script.png);}
+{background-image: url(../images/js.png);}
 
 /* directories */
 table tr.dir td:first-of-type a
 {background-image: url(../images/folder.png);}
+
+/* python */
+table tr td:first-of-type a[href$=".py"]
+{background-image: url(../images/python.png);}
+
+/* text */
+table tr td:first-of-type a[href$=".txt"]
+{background-image: url(../images/text.png);}
+
+/* java */
+table tr td:first-of-type a[href$=".java"]
+{background-image: url(../images/java.png);}
 
 /* iPhone */
 @media only screen and (max-device-width: 736px) {
