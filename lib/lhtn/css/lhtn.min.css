@@ -2484,25 +2484,25 @@ h3#arc-title {
   margin-left: 10px;
 }
 
-#main-content.full2 #lession-wrapper {
+#main-content.full2 #lesson-wrapper {
   margin-right: 10px;
   min-height: 800px !important;
 }
 
-#lession-wrapper {
+#lesson-wrapper {
   border: 1px solid #2076b8;
 }
 
-#lession-title {
+#lesson-title {
   background: #2a84c9;
   height: 30px;
 }
 
-.fixed #lession-title {
+.fixed #lesson-title {
   background: #2076b8;
 }
 
-#lession-title h3 {
+#lesson-title h3 {
   font-size: 1.083em;
   font-weight: 400;
   height: 40px;
