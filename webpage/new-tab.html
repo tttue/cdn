@@ -18,10 +18,7 @@
         "en_words_2186",
       ],
       korean: [
-        "ko_kiip_0",
-        "ko_kiip_0_1",
-        "ko_kiip_1",
-        "ko_giao_trinh_tu_hoc_tieng_han_01",
+        "ko_tieng_han_tong_hop_danh_cho_nguoi_viet_3",
       ],
       korean_grammar: [
         "ko_ngu_phap_so_cap",
@@ -35,13 +32,14 @@
 
     }
     // const language_list = ["english", "korean", "vn_korean"]
-    const language_list = ["korean_grammar"]
+    const language_list = ["korean"]
     const language = language_list[tool.getRandomInt(language_list.length - 1)]
     const lesson_s = lessons[language].join(',')
     let new_link = 'https://google.com'
     switch (language) {
       case 'korean':
-        new_link = `https://kor.tttue.ddnsfree.com/word/kor-random.py?num=10&lesson=${lesson_s}&v=${rand_s}`
+        // new_link = `https://kor.tttue.ddnsfree.com/word/kor-random.py?num=10&lesson=${lesson_s}&v=${rand_s}`
+        new_link = `https://kor.tttue.ddnsfree.com/word/kor-daily.py?lesson=${lesson_s}&random=1&v=${rand_s}`
         break
       case 'korean_grammar':
         new_link = `https://kor.tttue.ddnsfree.com/word/kor-random.py?num=10&lesson=${lesson_s}&v=${rand_s}`
